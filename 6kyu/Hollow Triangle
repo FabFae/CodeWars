@@ -1,0 +1,17 @@
+// https://www.codewars.com/kata/57819b700a8eb2d6b00002ab
+
+
+function hollowTriangle(n){
+  let returnArray = []
+  for (i = 1; i < n; i++){
+   returnArray.push ('_'.repeat(n-i) 
+                + '#'
+                + '_'.repeat(i > 1 ? ((i-1)*2 -1) : 0 )
+                + (i > 1 ? '#' : '')
+                + '_'.repeat(n-i)) 
+  }
+  returnArray.push('#'.repeat(n) + '#'.repeat(n-1))
+  
+  
+  return returnArray
+}
